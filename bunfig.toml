@@ -1,0 +1,3 @@
+[install]
+# Pin exact versions saat `bun add`
+exact = true

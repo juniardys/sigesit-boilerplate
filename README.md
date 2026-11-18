@@ -38,7 +38,7 @@ bun run db:migrate          # buat migration + apply ke DB
 | `bun run dev` | Jalankan backend + frontend (watch mode) |
 | `bun run build` | Generate Prisma client, build backend + frontend |
 | `bun run start` | Jalankan hasil build (production) |
-| `bun run test` | Jalankan semua test (`bun test`) |
+| `bun run test` | Jalankan test tiap workspace (proses terpisah) |
 | `bun run typecheck` | Type-check semua workspace |
 | `bun run db:migrate` | `prisma migrate dev` |
 | `bun run db:deploy` | `prisma migrate deploy` (production) |

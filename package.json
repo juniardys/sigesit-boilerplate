@@ -1,0 +1,24 @@
+{
+  "name": "boilerplate",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "packageManager": "bun@1.3.14",
+  "scripts": {
+    "dev": "bun run db:generate && bun run --filter './apps/*' --parallel dev",
+    "build": "bun run db:generate && bun run --filter './apps/*' build",
+    "start": "bun run --filter './apps/*' --parallel start",
+    "test": "bun run --filter '*' test",
+    "typecheck": "bun run --filter '*' typecheck",
+    "db:generate": "bun run --filter @repo/database db:generate",
+    "db:migrate": "bun run --filter @repo/database db:migrate",
+    "db:deploy": "bun run --filter @repo/database db:deploy",
+    "db:studio": "bun run --filter @repo/database db:studio",
+    "security:osv": "node --dns-result-order=ipv4first scripts/osv-scan.mjs bun.lock"
+  },
+  "devDependencies": {
+    "typescript": "6.0.3"
+  }
+}
